@@ -344,7 +344,7 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-image: url("./image2.jpg");
+    background-image: url("./images/image2.jpg");
     width:45%;
     height:80vh;
     background-size: cover;
