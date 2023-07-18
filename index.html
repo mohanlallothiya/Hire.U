@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="https://kit.fontawesome.com/5f59ca6ad3.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" type="text/css" href="style.css" >
-        <script src="index.js"></script>
     </head>
     <body>
         <div class="mainContainer">
+            <div class="navMainCon">
             <div class="navBar">
                 <button onclick="displayhome()" class="logo">Hire.<span class="spanU">U</span></button>
                 <div class="navLinksCon">
                     <a class="link" href="#">Jobs</a>
                     <a class="link" href="#">Companies</a>
-                    <button class="searchbutton" onclick="displaysearchcon()">Search</button>
+                    <a class="link" onclick="displaysearchcon()">Search</a>
                     <button class="signinBtn" onclick="displaysignincon()" >Signin</button>
                     <button class="signupBtn" onclick="displaysignupcon()" >Signup</button>
+                </div>
+                <a id="threebar" class="navlinkBtn" href="#"><i class="fas fa-bars"></i></a>
+                <a id="cross" href="#" class="navlinkBtn nodisplay">X</a>
+            </div>
+                <div id="bottomnavLinkCon" class="nodisplay">
+                    <a class="smallLink" href="#">Jobs</a>
+                    <a class="smallLink" href="#">Companies</a>
+                    <a class="smallLink" onclick="displaysearchcon()">Search</a>
+                    <button class="smallsigninBtn" onclick="displaysignincon()" >Signin</button>
+                    <hr style="height:1px;width:100%;margin:0px;opacity: 0.3;"/>
+                    <button class="smallsignupBtn" onclick="displaysignupcon()" >Signup</button>
                 </div>
             </div>
             <section id="signupcon" class="nodisplay">
@@ -27,7 +39,7 @@
                         </div>
                         <div class="signinbtnCon" style="margin-top:10px;">
                             <h1 class="regH">Already Registered ?</h1>
-                            <button class="signinBtn" onclick="displaysignincon()" >Signin</button>
+                            <button class="signinBtn1" onclick="displaysignincon()" >Signin</button>
                         </div>
                     </div>
                     <div class="signupsubCon">
@@ -57,15 +69,13 @@
                             </div>
                             <div style="margin-bottom: 10px; margin-top: 10px;">
                                 <Label class="labelH" for="about">About You</Label>
-                                <textarea class="textInput" col="30" rows="6" type="text" id="about" placeholder="Describe Yourself"></textarea>
+                                <textarea class="textInput" col="30" rows="5" type="text" id="about" placeholder="Describe Yourself"></textarea>
                             </div>
                         
-                            <div style="display: flex;flex-direction: row;align-items: center;margin-bottom: 10px; margin-top: 10px;">
+                            <div class="signupButtonCon">
                                 <p class="terms">By signing up,You agree to the terms and conditions and privacy policy of Hire.U</p>
-                                <button class="signupBtn">Signup</button>
-
+                                <button class="signupBtn1">Signup</button>
                             </div>
-
                         </div>
                     </div>
                     
@@ -81,8 +91,8 @@
                             </div>
                             <h1 class="ques">?</h1>
                         </div>
-                        <button class="signupbutton"onclick="displaysignupcon()">Signup</button>
-                        <div class="orCon orCon1">
+                        <button class="signupbutton1"onclick="displaysignupcon()">Signup</button>
+                        <div class="orCon">
                             <hr style="width:40%;margin:0px;"/>
                             <p class="or or1">Or</p>
                             <hr style="width:40%;margin:0px;"/>
@@ -93,14 +103,24 @@
                         </div>
                     </div>
                     <div class="signincon2">
-                        <h1 class="signinHeading">Signin</h1>
-                        <div>
-                        <Label class="labelH" for="email">Registered Email ID</Label>
-                        <input class="emailInput" type="text" id="email" placeholder=""/>
+                        <div class="newConTop">
+                            <div class="newConTop1">
+                                <h1 class="newH">New to</h1>
+                                <h1 class="logo newLogo">Hire.<span class="spanU newU">U</span></h1>
+                            </div>
+                            <h1 class="ques">?</h1>
                         </div>
-                        <div style="width:100%;">
+                        <button class="signupbutton" onclick="displaysignupcon()">Signup</button>
+                        <hr class="hrline" />
+                        <div class="signinbottomcon">
+                        <h1 class="signinHeading">Signin</h1>
+                        <div class="signinInputCon">
+                        <Label class="labelH" for="email">Registered Email ID</Label>
+                        <input class="emailInput" type="text" id="email" placeholder="email"/>
+                        </div>
+                        <div class="signinInputCon">
                         <Label class="labelH" for="password">Password</Label>
-                        <input class="emailInput" type="password" id="password" placeholder=""/>
+                        <input class="emailInput" type="password" id="password" placeholder="password"/>
                         </div>
                         <button class="signinbutton">Signin</button>
                         <div class="orCon">
@@ -111,6 +131,7 @@
                         <div class="googleCon">
                             <img class="googleLogo" src="./images/google.png"/>
                             <p class="signinGoogle">Signin with Google</p>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -126,7 +147,7 @@
                         <div class="candidateCon">
                             <div class="candidatecon1">
                                 <div class="candidateImagecon">
-                                    <img class="candidateImage" src="./myimage5.jpg"/>
+                                    <img class="candidateImage" src="./images/myimage5.jpg"/>
                                     <div class="candidateNamecon">
                                         <h1 class="candidateName">Mohan Lal Lothiya</h1>
                                         <p class="candidateDesc">BTech - Electrical Engineering</p>
@@ -160,8 +181,8 @@
                             </div>
                             <div class="candidatecon2">
                                 <div class="candidatebtncon">
-                                    <button class="signupBtn laterBtn">Shortlist</button>
-                                    <button class="signinBtn laterBtn">Later</button>
+                                    <button class="signupBtn1 laterBtn">Shortlist</button>
+                                    <button class="signinBtn1 laterBtn">Later</button>
                                 </div>
                                 <img class="resume" id="resImage" src="./images/mohan_resume_page-0001.jpg"/>
                             </div>
@@ -178,7 +199,7 @@
                                 </div>
                                 <div>
                                     <h1 class="candidateDetailHead">Summary</h1>
-                                    <p class="summary" >Experienced developer with 1 years of expertise in Node.js, Express, React.js and frontend development.
+                                    <p class="summary" >Experienced developer with 1 year of expertise in Node.js, Express, React.js and frontend development.
                                         Proficient in MongoDB, Redis, and MySQL for efficient data management</p>
                                 </div>
                                 <div class="candidateDetailCon">
@@ -203,8 +224,8 @@
                             </div>
                             <div class="candidatecon2">
                                 <div class="candidatebtncon">
-                                    <button class="signupBtn laterBtn">Shortlist</button>
-                                    <button class="signinBtn laterBtn">Later</button>
+                                    <button class="signupBtn1 laterBtn">Shortlist</button>
+                                    <button class="signinBtn1 laterBtn">Later</button>
                                 </div>
                                 <img class="resume" src="./images/mohan_resume_page-0001.jpg"/>
                             </div>
@@ -236,7 +257,7 @@
                 <div class="con1">
                     <div class="subCon1">
                         <h1 class="heading1">Let’s get Hired !</h1>
-                        <h1 class="des1">in world’s leading firms</h1>
+                        <h1 class="des1">in world’s leading Tech firms</h1>
                     </div>
                     <div class="subCon2">
                         <img class="image1" src="./images/image1.jpg" />
@@ -332,3 +353,50 @@
 
     </body>
 </html>
+
+<script type="text/javascript">
+let signupcontainer=document.getElementById("signupcon");
+let signincontainer=document.getElementById("signincon");
+let homecontainer=document.getElementById("homepage");
+let searchcontainer=document.getElementById("search");
+let bottomLinks = document.getElementById("bottomnavLinkCon");
+let threeBar = document.getElementById("threebar");
+let crossBtn = document.getElementById("cross")
+
+
+function extendNavbar() {
+    threeBar.classList.toggle("nodisplay");
+    crossBtn.classList.toggle("nodisplay");
+    bottomLinks.classList.toggle("nodisplay");
+    bottomLinks.classList.toggle("navlinkSmallCon");
+}
+threeBar.addEventListener("click", extendNavbar);
+crossBtn.addEventListener("click", extendNavbar);
+
+function displaysignupcon(){  
+    homecontainer.classList.add("nodisplay");
+    signincontainer.classList.add("nodisplay");
+    signupcontainer.classList.remove("nodisplay");
+    searchcontainer.classList.add("nodisplay");
+}
+function displaysignincon(){
+    homecontainer.classList.add("nodisplay");
+    signincontainer.classList.remove("nodisplay");
+    signupcontainer.classList.add("nodisplay");
+    searchcontainer.classList.add("nodisplay");
+}
+
+function displayhome(){
+    homecontainer.classList.remove("nodisplay");
+    signincontainer.classList.add("nodisplay");
+    signupcontainer.classList.add("nodisplay");
+    searchcontainer.classList.add("nodisplay");
+}
+
+function displaysearchcon(){
+    homecontainer.classList.add("nodisplay");
+    signincontainer.classList.add("nodisplay");
+    signupcontainer.classList.add("nodisplay");
+    searchcontainer.classList.remove("nodisplay");
+}
+</script>
