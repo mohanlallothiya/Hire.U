@@ -122,7 +122,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 60px;
+    padding: 60px 20px;
     width:100%;
 }
 .subCon2{
@@ -135,7 +135,7 @@ body {
     margin:5px 0px;
 }
 .des1{
-    font-size: 36px ;
+    font-size: 40px ;
     color:#433E3E ;
     font-family: "Bree Serif" ;
     font-weight: lighter;
@@ -145,7 +145,7 @@ body {
     padding:60px 20px;
 }
 .heading2{
-    font-size: 50px;
+    font-size: 40px;
     color:#F51010 ;
     font-family: "Bree Serif" ;
     margin:0px;
@@ -178,12 +178,12 @@ body {
 .job{
     margin:0px;
     margin-bottom: 5px;
-    font-size: 18px;
+    font-size: 14px;
     font-family: "Bree serif";
 }
 .number{
     margin:0px;
-    font-size: 16px;
+    font-size: 12px;
     color:#696968;
     font-family: "Bree serif";
 }
@@ -235,11 +235,11 @@ footer{
     padding:20px;
 }
 .footerCon1{
-    width:45%;
+    width:40%;
 }
 .address{
     margin:0px;
-    font-size:18px;
+    font-size:14px;
     font-family: "Bree serif";
 }
 .footerCon2{
@@ -247,8 +247,8 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    width:50%;
-    margin-top: 5px;
+    width:55%;
+    margin-top: 10px;
 }
 .footerIconCon{
     display: flex;
@@ -259,7 +259,7 @@ footer{
     margin-top:30px;
 }
 .footerLink{
-    font-size: 20px;
+    font-size: 16px;
     font-family: "Bree Serif";
     color:black;
     text-decoration: none;
@@ -429,6 +429,7 @@ footer{
     justify-content: space-between;
     align-items: center;
     width:100%;
+    min-height:550px;
     border:1px solid #807D7D;
     border-radius: 15px;
 }
@@ -750,6 +751,7 @@ footer{
         justify-content: flex-end;
         background-image: url("./images/image2.jpg");
         width:49%;
+        min-height: 550px;
         height:80vh;
         background-size: cover;
         border-radius: 15px;
